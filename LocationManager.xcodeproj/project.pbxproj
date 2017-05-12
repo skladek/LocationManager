@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14EBA4601EC5FF000020C1DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA45F1EC5FF000020C1DD /* AppDelegate.swift */; };
-		14EBA4621EC5FF000020C1DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA4611EC5FF000020C1DD /* ViewController.swift */; };
-		14EBA4651EC5FF000020C1DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EBA4631EC5FF000020C1DD /* Main.storyboard */; };
-		14EBA4671EC5FF000020C1DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14EBA4661EC5FF000020C1DD /* Assets.xcassets */; };
-		14EBA46A1EC5FF000020C1DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EBA4681EC5FF000020C1DD /* LaunchScreen.storyboard */; };
 		14EBA4751EC5FF000020C1DD /* LocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA4741EC5FF000020C1DD /* LocationManagerTests.swift */; };
+		14EBA4881EC600C00020C1DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA4801EC600C00020C1DD /* AppDelegate.swift */; };
+		14EBA4891EC600C00020C1DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14EBA4811EC600C00020C1DD /* Assets.xcassets */; };
+		14EBA48A1EC600C00020C1DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EBA4821EC600C00020C1DD /* LaunchScreen.storyboard */; };
+		14EBA48F1EC6013E0020C1DD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA48D1EC6013E0020C1DD /* HomeViewController.swift */; };
+		14EBA4901EC6013E0020C1DD /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EBA48E1EC6013E0020C1DD /* HomeViewController.xib */; };
+		14EBA4921EC602310020C1DD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA4911EC602310020C1DD /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,15 +28,16 @@
 
 /* Begin PBXFileReference section */
 		14EBA45C1EC5FF000020C1DD /* LocationManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		14EBA45F1EC5FF000020C1DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14EBA4611EC5FF000020C1DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		14EBA4641EC5FF000020C1DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		14EBA4661EC5FF000020C1DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		14EBA4691EC5FF000020C1DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		14EBA46B1EC5FF000020C1DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14EBA4701EC5FF000020C1DD /* LocationManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14EBA4741EC5FF000020C1DD /* LocationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerTests.swift; sourceTree = "<group>"; };
 		14EBA4761EC5FF000020C1DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14EBA4801EC600C00020C1DD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14EBA4811EC600C00020C1DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14EBA4831EC600C00020C1DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14EBA4841EC600C00020C1DD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14EBA48D1EC6013E0020C1DD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		14EBA48E1EC6013E0020C1DD /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		14EBA4911EC602310020C1DD /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +79,9 @@
 		14EBA45E1EC5FF000020C1DD /* LocationManager */ = {
 			isa = PBXGroup;
 			children = (
-				14EBA45F1EC5FF000020C1DD /* AppDelegate.swift */,
-				14EBA4611EC5FF000020C1DD /* ViewController.swift */,
-				14EBA4631EC5FF000020C1DD /* Main.storyboard */,
-				14EBA4661EC5FF000020C1DD /* Assets.xcassets */,
-				14EBA4681EC5FF000020C1DD /* LaunchScreen.storyboard */,
-				14EBA46B1EC5FF000020C1DD /* Info.plist */,
+				14EBA47F1EC600C00020C1DD /* Application */,
+				14EBA4851EC600C00020C1DD /* LocationManager */,
+				14EBA4861EC600C00020C1DD /* ViewControllers */,
 			);
 			path = LocationManager;
 			sourceTree = "<group>";
@@ -94,6 +93,34 @@
 				14EBA4761EC5FF000020C1DD /* Info.plist */,
 			);
 			path = LocationManagerTests;
+			sourceTree = "<group>";
+		};
+		14EBA47F1EC600C00020C1DD /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				14EBA4801EC600C00020C1DD /* AppDelegate.swift */,
+				14EBA4811EC600C00020C1DD /* Assets.xcassets */,
+				14EBA4821EC600C00020C1DD /* LaunchScreen.storyboard */,
+				14EBA4841EC600C00020C1DD /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		14EBA4851EC600C00020C1DD /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				14EBA4911EC602310020C1DD /* LocationManager.swift */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		14EBA4861EC600C00020C1DD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				14EBA48D1EC6013E0020C1DD /* HomeViewController.swift */,
+				14EBA48E1EC6013E0020C1DD /* HomeViewController.xib */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,9 +208,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14EBA46A1EC5FF000020C1DD /* LaunchScreen.storyboard in Resources */,
-				14EBA4671EC5FF000020C1DD /* Assets.xcassets in Resources */,
-				14EBA4651EC5FF000020C1DD /* Main.storyboard in Resources */,
+				14EBA4891EC600C00020C1DD /* Assets.xcassets in Resources */,
+				14EBA48A1EC600C00020C1DD /* LaunchScreen.storyboard in Resources */,
+				14EBA4901EC6013E0020C1DD /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,8 +228,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14EBA4621EC5FF000020C1DD /* ViewController.swift in Sources */,
-				14EBA4601EC5FF000020C1DD /* AppDelegate.swift in Sources */,
+				14EBA4881EC600C00020C1DD /* AppDelegate.swift in Sources */,
+				14EBA48F1EC6013E0020C1DD /* HomeViewController.swift in Sources */,
+				14EBA4921EC602310020C1DD /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,18 +253,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		14EBA4631EC5FF000020C1DD /* Main.storyboard */ = {
+		14EBA4821EC600C00020C1DD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				14EBA4641EC5FF000020C1DD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		14EBA4681EC5FF000020C1DD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				14EBA4691EC5FF000020C1DD /* Base */,
+				14EBA4831EC600C00020C1DD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -342,7 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MV978XDK83;
-				INFOPLIST_FILE = LocationManager/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LocationManager/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.LocationManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,7 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MV978XDK83;
-				INFOPLIST_FILE = LocationManager/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LocationManager/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.LocationManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +432,7 @@
 				14EBA47B1EC5FF000020C1DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14EBA47C1EC5FF000020C1DD /* Build configuration list for PBXNativeTarget "LocationManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +441,7 @@
 				14EBA47E1EC5FF000020C1DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
