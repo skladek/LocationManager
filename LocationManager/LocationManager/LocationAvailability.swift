@@ -27,7 +27,7 @@ class LocationAvailability {
         switch authorizationStatus {
         case .authorizedAlways,
              .authorizedWhenInUse:
-            return (available: true, error: nil)
+            return nil
         case .denied:
             code = .authorizationStatusDenied
             message = "Location services permission denied."
