@@ -21,6 +21,7 @@
 		14F21D911EC65376000E0431 /* Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F21D901EC65376000E0431 /* Availability.swift */; };
 		14F21D941EC65750000E0431 /* LocationManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F21D921EC65645000E0431 /* LocationManagerSpec.swift */; };
 		14F21D981EC657B8000E0431 /* MockAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F21D971EC657B8000E0431 /* MockAvailability.swift */; };
+		14F21D9A1EC66317000E0431 /* LocationErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F21D991EC66317000E0431 /* LocationErrorSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		14F21D901EC65376000E0431 /* Availability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Availability.swift; path = Protocols/Availability.swift; sourceTree = "<group>"; };
 		14F21D921EC65645000E0431 /* LocationManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManagerSpec.swift; sourceTree = "<group>"; };
 		14F21D971EC657B8000E0431 /* MockAvailability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockAvailability.swift; path = Mocks/MockAvailability.swift; sourceTree = "<group>"; };
+		14F21D991EC66317000E0431 /* LocationErrorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationErrorSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				14F21D881EC64E43000E0431 /* LocationAvailabilitySpec.swift */,
+				14F21D991EC66317000E0431 /* LocationErrorSpec.swift */,
 				14F21D921EC65645000E0431 /* LocationManagerSpec.swift */,
 				14F21D961EC657A6000E0431 /* Mocks */,
 			);
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14F21D981EC657B8000E0431 /* MockAvailability.swift in Sources */,
+				14F21D9A1EC66317000E0431 /* LocationErrorSpec.swift in Sources */,
 				14F21D891EC64E43000E0431 /* LocationAvailabilitySpec.swift in Sources */,
 				14F21D941EC65750000E0431 /* LocationManagerSpec.swift in Sources */,
 			);
