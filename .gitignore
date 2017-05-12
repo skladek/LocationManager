@@ -16,11 +16,11 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
-*.xcworkspacedata
 
 ## Other
 *.moved-aside
 *.xcuserstate
+*.xcworkspacedata
 
 ## Obj-C/Swift specific
 *.hmap
@@ -49,9 +49,8 @@ playground.xcworkspace
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build
+Carthage/Checkouts
+!Carthage/Build
 
 # fastlane
 #

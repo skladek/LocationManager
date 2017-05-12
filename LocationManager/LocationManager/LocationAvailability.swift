@@ -21,7 +21,7 @@ class LocationAvailability {
     /// - Parameter authorizationStatus: The authorization status to check availiability against
     /// - Returns: The current availability
     static func authorizationStatus(_ authorizationStatus: CLAuthorizationStatus) -> Availability? {
-        let code: LocationError.ErrorCode
+        let code: LocationError.Code
         let message: String
 
         switch authorizationStatus {

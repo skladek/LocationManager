@@ -16,6 +16,8 @@
 		14EBA4921EC602310020C1DD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA4911EC602310020C1DD /* LocationManager.swift */; };
 		14EBA4941EC642400020C1DD /* LocationAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA4931EC642400020C1DD /* LocationAvailability.swift */; };
 		14EBA4961EC642890020C1DD /* LocationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA4951EC642890020C1DD /* LocationError.swift */; };
+		14F21D801EC64D3F000E0431 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F21D7E1EC64D3F000E0431 /* Nimble.framework */; };
+		14F21D811EC64D3F000E0431 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F21D7F1EC64D3F000E0431 /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		14EBA4911EC602310020C1DD /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		14EBA4931EC642400020C1DD /* LocationAvailability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAvailability.swift; sourceTree = "<group>"; };
 		14EBA4951EC642890020C1DD /* LocationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationError.swift; sourceTree = "<group>"; };
+		14F21D7E1EC64D3F000E0431 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		14F21D7F1EC64D3F000E0431 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F21D811EC64D3F000E0431 /* Quick.framework in Frameworks */,
+				14F21D801EC64D3F000E0431 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +73,7 @@
 			children = (
 				14EBA45E1EC5FF000020C1DD /* LocationManager */,
 				14EBA4731EC5FF000020C1DD /* LocationManagerTests */,
+				14F21D821EC64D44000E0431 /* Frameworks */,
 				14EBA45D1EC5FF000020C1DD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,6 +134,15 @@
 				14EBA48E1EC6013E0020C1DD /* HomeViewController.xib */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		14F21D821EC64D44000E0431 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14F21D7E1EC64D3F000E0431 /* Nimble.framework */,
+				14F21D7F1EC64D3F000E0431 /* Quick.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MV978XDK83;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = "$(SRCROOT)/LocationManager/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.LocationManager;
@@ -383,6 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MV978XDK83;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = "$(SRCROOT)/LocationManager/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.LocationManager;
@@ -397,6 +415,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = MV978XDK83;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = LocationManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.LocationManagerTests;
@@ -412,6 +431,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = MV978XDK83;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = LocationManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.LocationManagerTests;
