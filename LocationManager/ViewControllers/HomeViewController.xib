@@ -20,24 +20,33 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkY-Se-pyr">
-                    <rect key="frame" x="107" y="102" width="160" height="30"/>
+                    <rect key="frame" x="107" y="140" width="160" height="30"/>
                     <state key="normal" title="Request Location Once"/>
                     <connections>
                         <action selector="requestLocationOnce" destination="-1" eventType="touchUpInside" id="Eqz-Z3-hfL"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJT-1Y-bhG">
-                    <rect key="frame" x="88.5" y="64" width="198" height="30"/>
+                    <rect key="frame" x="88.5" y="102" width="198" height="30"/>
                     <state key="normal" title="Request Location Permission"/>
                     <connections>
                         <action selector="requestPermissionTapped" destination="-1" eventType="touchUpInside" id="29p-sM-L2l"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K85-KY-wHN">
+                    <rect key="frame" x="90" y="64" width="195" height="30"/>
+                    <state key="normal" title="Request Location Availability"/>
+                    <connections>
+                        <action selector="requestAvailiabilityTapped" destination="-1" eventType="touchUpInside" id="2tQ-Mb-yvQ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="K85-KY-wHN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TSm-eH-jXk"/>
                 <constraint firstItem="RkY-Se-pyr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WIi-WE-b05"/>
-                <constraint firstItem="BJT-1Y-bhG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Xph-tQ-wsS"/>
+                <constraint firstItem="K85-KY-wHN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Zwq-xN-NQx"/>
+                <constraint firstItem="BJT-1Y-bhG" firstAttribute="top" secondItem="K85-KY-wHN" secondAttribute="bottom" constant="8" id="pPs-s4-3Uw"/>
                 <constraint firstItem="RkY-Se-pyr" firstAttribute="top" secondItem="BJT-1Y-bhG" secondAttribute="bottom" constant="8" id="ve7-H0-WO5"/>
                 <constraint firstItem="BJT-1Y-bhG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xzO-6L-bvy"/>
             </constraints>
