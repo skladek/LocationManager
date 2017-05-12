@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14EBA4751EC5FF000020C1DD /* LocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA4741EC5FF000020C1DD /* LocationManagerTests.swift */; };
 		14EBA4881EC600C00020C1DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA4801EC600C00020C1DD /* AppDelegate.swift */; };
 		14EBA4891EC600C00020C1DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14EBA4811EC600C00020C1DD /* Assets.xcassets */; };
 		14EBA48A1EC600C00020C1DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EBA4821EC600C00020C1DD /* LaunchScreen.storyboard */; };
@@ -16,8 +15,9 @@
 		14EBA4921EC602310020C1DD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA4911EC602310020C1DD /* LocationManager.swift */; };
 		14EBA4941EC642400020C1DD /* LocationAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA4931EC642400020C1DD /* LocationAvailability.swift */; };
 		14EBA4961EC642890020C1DD /* LocationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA4951EC642890020C1DD /* LocationError.swift */; };
-		14F21D801EC64D3F000E0431 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F21D7E1EC64D3F000E0431 /* Nimble.framework */; };
-		14F21D811EC64D3F000E0431 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F21D7F1EC64D3F000E0431 /* Quick.framework */; };
+		14F21D891EC64E43000E0431 /* LocationAvailabilitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F21D881EC64E43000E0431 /* LocationAvailabilitySpec.swift */; };
+		14F21D8C1EC64FB3000E0431 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F21D7E1EC64D3F000E0431 /* Nimble.framework */; };
+		14F21D8D1EC64FB3000E0431 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F21D7F1EC64D3F000E0431 /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +33,6 @@
 /* Begin PBXFileReference section */
 		14EBA45C1EC5FF000020C1DD /* LocationManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14EBA4701EC5FF000020C1DD /* LocationManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		14EBA4741EC5FF000020C1DD /* LocationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerTests.swift; sourceTree = "<group>"; };
 		14EBA4761EC5FF000020C1DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14EBA4801EC600C00020C1DD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14EBA4811EC600C00020C1DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		14EBA4951EC642890020C1DD /* LocationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationError.swift; sourceTree = "<group>"; };
 		14F21D7E1EC64D3F000E0431 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		14F21D7F1EC64D3F000E0431 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		14F21D881EC64E43000E0431 /* LocationAvailabilitySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAvailabilitySpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14F21D811EC64D3F000E0431 /* Quick.framework in Frameworks */,
-				14F21D801EC64D3F000E0431 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F21D8D1EC64FB3000E0431 /* Quick.framework in Frameworks */,
+				14F21D8C1EC64FB3000E0431 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 		14EBA4731EC5FF000020C1DD /* LocationManagerTests */ = {
 			isa = PBXGroup;
 			children = (
-				14EBA4741EC5FF000020C1DD /* LocationManagerTests.swift */,
+				14F21D871EC64E43000E0431 /* LocationManager */,
 				14EBA4761EC5FF000020C1DD /* Info.plist */,
 			);
 			path = LocationManagerTests;
@@ -145,6 +145,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		14F21D871EC64E43000E0431 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				14F21D881EC64E43000E0431 /* LocationAvailabilitySpec.swift */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,6 +180,7 @@
 				14EBA46C1EC5FF000020C1DD /* Sources */,
 				14EBA46D1EC5FF000020C1DD /* Frameworks */,
 				14EBA46E1EC5FF000020C1DD /* Resources */,
+				14F21D8E1EC65002000E0431 /* Carthage Run Script */,
 			);
 			buildRules = (
 			);
@@ -201,6 +210,7 @@
 					14EBA46F1EC5FF000020C1DD = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = MV978XDK83;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 14EBA45B1EC5FF000020C1DD;
 					};
@@ -245,6 +255,25 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		14F21D8E1EC65002000E0431 /* Carthage Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			name = "Carthage Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		14EBA4581EC5FF000020C1DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -262,7 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14EBA4751EC5FF000020C1DD /* LocationManagerTests.swift in Sources */,
+				14F21D891EC64E43000E0431 /* LocationAvailabilitySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,12 +443,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = MV978XDK83;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = LocationManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.LocationManagerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocationManager.app/LocationManager";
 			};
@@ -430,6 +461,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = MV978XDK83;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = LocationManagerTests/Info.plist;
