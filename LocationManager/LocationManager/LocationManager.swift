@@ -25,13 +25,13 @@ class LocationManager: NSObject {
 
     typealias Availability = (available: Bool, error: NSError?)
 
-    typealias LocationRequest = (_ location: CLLocation?, _ error: NSError?) -> ()
+    typealias LocationRequest = (_ locations: [CLLocation]?, _ error: NSError?) -> ()
 
     static let errorDomain = "com.skladek.locationManager"
 
     let locationManager = CLLocationManager()
 
-    var oneTimeLocationRequestCompletion: LocationRequest?
+    var locationRequest: LocationRequest?
 
     let permissionType: PermissionType
 
@@ -64,9 +64,14 @@ class LocationManager: NSObject {
         return (available: true, error: nil)
     }
 
-    func requestLocation(_ completion: @escaping LocationRequest) {
-        oneTimeLocationRequestCompletion = completion
-        locationManager.requestLocation()
+    func startLocationUpdates(_ completion: @escaping LocationRequest) {
+        locationRequest = completion
+        locationManager.startUpdatingLocation()
+    }
+
+    func stopLocationUpdates() {
+        locationManager.stopUpdatingLocation()
+        locationRequest = nil
     }
 
     private func authorizationStatus() -> Availability? {
@@ -121,19 +126,11 @@ class LocationManager: NSObject {
 
 extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        if let oneTimeRequest = oneTimeLocationRequestCompletion {
-            let locationError = self.error(code: .unknown, message: error.localizedDescription)
-            oneTimeRequest(nil, locationError)
-        }
+        let locationError = self.error(code: .unknown, message: error.localizedDescription)
+        locationRequest?(nil, locationError)
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else {
-            return
-        }
-
-        if let oneTimeRequest = oneTimeLocationRequestCompletion {
-            oneTimeRequest(location, nil)
-        }
+        locationRequest?(locations, nil)
     }
 }

@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     let locationManager: LocationManager
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        locationManager = LocationManager(permissionType: .whenInUse)
+        locationManager = LocationManager(permissionType: .always)
 
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
@@ -36,16 +36,20 @@ class HomeViewController: UIViewController {
         }
 
         // Location services is available
-    }
-
-    @IBAction func requestLocationOnce() {
-        locationManager.requestLocation({ (location, error) in
-            print("Location: \(String(describing: location))")
-            print("Error: \(String(describing: error))")
-        })
+        print(availability.available)
     }
 
     @IBAction func requestPermissionTapped() {
         locationManager.requestAuthorization()
+    }
+
+    @IBAction func startUpdatingLocation() {
+        locationManager.startLocationUpdates { (locations, error) in
+            
+        }
+    }
+
+    @IBAction func stopUpdatingLocation() {
+        locationManager.stopLocationUpdates()
     }
 }
