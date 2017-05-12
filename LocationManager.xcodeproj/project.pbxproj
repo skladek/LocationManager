@@ -18,6 +18,9 @@
 		14F21D891EC64E43000E0431 /* LocationAvailabilitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F21D881EC64E43000E0431 /* LocationAvailabilitySpec.swift */; };
 		14F21D8C1EC64FB3000E0431 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F21D7E1EC64D3F000E0431 /* Nimble.framework */; };
 		14F21D8D1EC64FB3000E0431 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F21D7F1EC64D3F000E0431 /* Quick.framework */; };
+		14F21D911EC65376000E0431 /* Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F21D901EC65376000E0431 /* Availability.swift */; };
+		14F21D941EC65750000E0431 /* LocationManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F21D921EC65645000E0431 /* LocationManagerSpec.swift */; };
+		14F21D981EC657B8000E0431 /* MockAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F21D971EC657B8000E0431 /* MockAvailability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		14F21D7E1EC64D3F000E0431 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		14F21D7F1EC64D3F000E0431 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		14F21D881EC64E43000E0431 /* LocationAvailabilitySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAvailabilitySpec.swift; sourceTree = "<group>"; };
+		14F21D901EC65376000E0431 /* Availability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Availability.swift; path = Protocols/Availability.swift; sourceTree = "<group>"; };
+		14F21D921EC65645000E0431 /* LocationManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManagerSpec.swift; sourceTree = "<group>"; };
+		14F21D971EC657B8000E0431 /* MockAvailability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockAvailability.swift; path = Mocks/MockAvailability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 		14EBA4851EC600C00020C1DD /* LocationManager */ = {
 			isa = PBXGroup;
 			children = (
+				14F21D8F1EC6535C000E0431 /* Protocols */,
 				14EBA4931EC642400020C1DD /* LocationAvailability.swift */,
 				14EBA4951EC642890020C1DD /* LocationError.swift */,
 				14EBA4911EC602310020C1DD /* LocationManager.swift */,
@@ -149,8 +156,26 @@
 			isa = PBXGroup;
 			children = (
 				14F21D881EC64E43000E0431 /* LocationAvailabilitySpec.swift */,
+				14F21D921EC65645000E0431 /* LocationManagerSpec.swift */,
+				14F21D961EC657A6000E0431 /* Mocks */,
 			);
 			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		14F21D8F1EC6535C000E0431 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				14F21D901EC65376000E0431 /* Availability.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		14F21D961EC657A6000E0431 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				14F21D971EC657B8000E0431 /* MockAvailability.swift */,
+			);
+			name = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14EBA4941EC642400020C1DD /* LocationAvailability.swift in Sources */,
+				14F21D911EC65376000E0431 /* Availability.swift in Sources */,
 				14EBA4881EC600C00020C1DD /* AppDelegate.swift in Sources */,
 				14EBA4961EC642890020C1DD /* LocationError.swift in Sources */,
 				14EBA48F1EC6013E0020C1DD /* HomeViewController.swift in Sources */,
@@ -291,7 +317,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F21D981EC657B8000E0431 /* MockAvailability.swift in Sources */,
 				14F21D891EC64E43000E0431 /* LocationAvailabilitySpec.swift in Sources */,
+				14F21D941EC65750000E0431 /* LocationManagerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

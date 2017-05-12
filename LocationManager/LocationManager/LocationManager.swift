@@ -33,6 +33,8 @@ class LocationManager: NSObject {
 
     fileprivate var locationUpdater: LocationUpdate?
 
+    private let availability: Availability
+
     private let locationManager = CLLocationManager()
 
     // MARK: Initialization Methods
@@ -41,6 +43,21 @@ class LocationManager: NSObject {
     ///
     /// - Parameter permissionType: The permission type to initialize with.
     init(permissionType: PermissionType) {
+        self.availability = LocationAvailability()
+        self.permissionType = permissionType
+
+        super.init()
+
+        locationManager.delegate = self
+    }
+
+    /// Iniializes a Location Manager with injectable properties for testing purposes only. Do not use this initializer in production.
+    ///
+    /// - Parameters:
+    ///   - availability: Availability injectable
+    ///   - permissionType: Permission type injectable
+    init(availability: Availability, permissionType: PermissionType) {
+        self.availability = availability
         self.permissionType = permissionType
 
         super.init()
@@ -62,13 +79,14 @@ class LocationManager: NSObject {
     /// Requests an availability object describing the current availability state.
     ///
     /// - Returns: An availability object describing the current state.
-    func requestAvailability() -> LocationAvailability.Availability {
-        if let locationServicesUnavailability = LocationAvailability.locationServicesEnabled(CLLocationManager.locationServicesEnabled()) {
-            return locationServicesUnavailability
-        }
+    func requestAvailability() -> Availability.AvailabilityStatus {
+        let locationServicesAvailability = availability.servicesEnabled(CLLocationManager.locationServicesEnabled())
+        let authorizationStatusAvailability = availability.authorizationStatus(CLLocationManager.authorizationStatus())
 
-        if let authorizationStatusUnavailability = LocationAvailability.authorizationStatus(CLLocationManager.authorizationStatus()) {
-            return authorizationStatusUnavailability
+        if locationServicesAvailability.available == false {
+            return locationServicesAvailability
+        } else if authorizationStatusAvailability.available == false {
+            return authorizationStatusAvailability
         }
 
         return (available: true, error: nil)

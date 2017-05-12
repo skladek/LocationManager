@@ -9,25 +9,20 @@
 import CoreLocation
 import Foundation
 
-class LocationAvailability {
-
-    // MARK: Class Types
-
-    // A tuple to describe location availability with an error if location is unavailable.
-    typealias Availability = (available: Bool, error: NSError?)
+class LocationAvailability: Availability {
 
     /// Returns an availability object to describe availiability in reference to the authorization status.
     ///
     /// - Parameter authorizationStatus: The authorization status to check availiability against
     /// - Returns: The current availability
-    static func authorizationStatus(_ authorizationStatus: CLAuthorizationStatus) -> Availability? {
+    func authorizationStatus(_ authorizationStatus: CLAuthorizationStatus) -> AvailabilityStatus {
         let code: LocationError.Code
         let message: String
 
         switch authorizationStatus {
         case .authorizedAlways,
              .authorizedWhenInUse:
-            return nil
+            return (available: true, error: nil)
         case .denied:
             code = .authorizationStatusDenied
             message = "Location services permission denied."
@@ -48,13 +43,13 @@ class LocationAvailability {
     ///
     /// - Parameter enabled: A boolean describing if location services are enabled
     /// - Returns: The current availability
-    static func locationServicesEnabled(_ enabled: Bool) -> Availability? {
+    func servicesEnabled(_ enabled: Bool) -> AvailabilityStatus {
         if !enabled {
             let error = LocationError(code: .locationServicesDisabled, message: "Location services is currently disabled")
 
             return (available: false, error: error)
         }
 
-        return nil
+        return (available: true, error: nil)
     }
 }
