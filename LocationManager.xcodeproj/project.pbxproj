@@ -14,7 +14,7 @@
 		14EBA48F1EC6013E0020C1DD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA48D1EC6013E0020C1DD /* HomeViewController.swift */; };
 		14EBA4901EC6013E0020C1DD /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EBA48E1EC6013E0020C1DD /* HomeViewController.xib */; };
 		14EBA4921EC602310020C1DD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA4911EC602310020C1DD /* LocationManager.swift */; };
-		14EBA4941EC642400020C1DD /* LocationAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA4931EC642400020C1DD /* LocationAuthorization.swift */; };
+		14EBA4941EC642400020C1DD /* LocationAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA4931EC642400020C1DD /* LocationAvailability.swift */; };
 		14EBA4961EC642890020C1DD /* LocationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA4951EC642890020C1DD /* LocationError.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,7 @@
 		14EBA48D1EC6013E0020C1DD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		14EBA48E1EC6013E0020C1DD /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		14EBA4911EC602310020C1DD /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		14EBA4931EC642400020C1DD /* LocationAuthorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAuthorization.swift; sourceTree = "<group>"; };
+		14EBA4931EC642400020C1DD /* LocationAvailability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAvailability.swift; sourceTree = "<group>"; };
 		14EBA4951EC642890020C1DD /* LocationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +113,7 @@
 		14EBA4851EC600C00020C1DD /* LocationManager */ = {
 			isa = PBXGroup;
 			children = (
-				14EBA4931EC642400020C1DD /* LocationAuthorization.swift */,
+				14EBA4931EC642400020C1DD /* LocationAvailability.swift */,
 				14EBA4951EC642890020C1DD /* LocationError.swift */,
 				14EBA4911EC602310020C1DD /* LocationManager.swift */,
 			);
@@ -234,7 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14EBA4941EC642400020C1DD /* LocationAuthorization.swift in Sources */,
+				14EBA4941EC642400020C1DD /* LocationAvailability.swift in Sources */,
 				14EBA4881EC600C00020C1DD /* AppDelegate.swift in Sources */,
 				14EBA4961EC642890020C1DD /* LocationError.swift in Sources */,
 				14EBA48F1EC6013E0020C1DD /* HomeViewController.swift in Sources */,

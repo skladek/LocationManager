@@ -9,7 +9,17 @@
 import Foundation
 
 class LocationError: NSError {
-    enum ErrorCode: Int {
+
+    // MARK: Class Types
+
+    /// Error codes to describe possible Location Services error states.
+    ///
+    /// - unknown: An error occurred for an unknown reason.
+    /// - authorizationStatusDenied: The user has denied the app Location Services permission
+    /// - authorizationStatusNotDetermined: The user has not yet made a choice regarding Location Services permission
+    /// - authorizationStatusRestricted: The app is not allowed to use Location Services. The user cannot change this app status, possibly due to parental restrictions or similar.
+    /// - locationServicesDisabled: Location services is currently disabled.
+    enum Code: Int {
         case unknown = -1
         case authorizationStatusDenied
         case authorizationStatusNotDetermined
@@ -17,9 +27,17 @@ class LocationError: NSError {
         case locationServicesDisabled
     }
 
+    // MARK: Static Variables
+
+    /// The domain for errors. This should be updated to match the app Bundle Id on integration.
     static let errorDomain = "com.skladek.locationManager"
 
-    init(code: ErrorCode, message: String?) {
+    /// Initializes an error with the error code and an optional message.
+    ///
+    /// - Parameters:
+    ///   - code: The error code to use to describe the error
+    ///   - message: A string describing the error. If nil is passed as a message and code equals unknown, a generic message is used.
+    init(code: Code, message: String?) {
         var localizedDescription = message
 
         if code == .unknown && message == nil {

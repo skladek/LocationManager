@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
 
         if let error = availability.error {
             print(error.localizedDescription)
-            if error.code == LocationManager.ErrorCode.authorizationStatusNotDetermined.rawValue {
+            if error.code == LocationError.ErrorCode.authorizationStatusNotDetermined.rawValue {
                 // Request permission
             } else {
                 // Handle denied/restricted/disabled state

@@ -1,5 +1,5 @@
 //
-//  LocationAuthorization.swift
+//  LocationAvailability.swift
 //  LocationManager
 //
 //  Created by Sean on 5/12/17.
@@ -9,9 +9,17 @@
 import CoreLocation
 import Foundation
 
-class LocationAuthorization {
+class LocationAvailability {
+
+    // MARK: Class Types
+
+    // A tuple to describe location availability with an error if location is unavailable.
     typealias Availability = (available: Bool, error: NSError?)
 
+    /// Returns an availability object to describe availiability in reference to the authorization status.
+    ///
+    /// - Parameter authorizationStatus: The authorization status to check availiability against
+    /// - Returns: The current availability
     static func authorizationStatus(_ authorizationStatus: CLAuthorizationStatus) -> Availability? {
         let code: LocationError.ErrorCode
         let message: String
@@ -36,7 +44,11 @@ class LocationAuthorization {
         return (available: false, error: error)
     }
 
-    static func locationSerivicesEnabled(_ enabled: Bool) -> Availability? {
+    /// Returns an availability object to describe availiability as it relates to the enabled status of Location Services.
+    ///
+    /// - Parameter enabled: A boolean describing if location services are enabled
+    /// - Returns: The current availability
+    static func locationServicesEnabled(_ enabled: Bool) -> Availability? {
         if !enabled {
             let error = LocationError(code: .locationServicesDisabled, message: "Location services is currently disabled")
 

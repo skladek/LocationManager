@@ -10,18 +10,30 @@ import CoreLocation
 import UIKit
 
 class LocationManager: NSObject {
+
+    // MARK: Class Types
+
+    /// The location permission level.
+    ///
+    /// - always: Location permission is always available.
+    /// - whenInUse: Location permission is only available when the app is in use.
     enum PermissionType {
         case always
         case whenInUse
     }
 
-    typealias LocationRequest = (_ locations: [CLLocation]?, _ error: NSError?) -> ()
+    /// An object to send and receive location updates through.
+    typealias LocationUpdate = (_ locations: [CLLocation]?, _ error: NSError?) -> ()
 
-    let locationManager = CLLocationManager()
-
-    var locationRequest: LocationRequest?
+    // MARK: Public Variables
 
     let permissionType: PermissionType
+
+    // MARK: Private Variables
+
+    fileprivate var locationUpdater: LocationUpdate?
+
+    private let locationManager = CLLocationManager()
 
     // MARK: Initialization Methods
 
@@ -38,6 +50,7 @@ class LocationManager: NSObject {
 
     // MARK: Public Methods
 
+    /// Requests authorization with the current permission type from the location manager object.
     func requestAuthorization() {
         if self.permissionType == .always {
             locationManager.requestAlwaysAuthorization()
@@ -46,36 +59,44 @@ class LocationManager: NSObject {
         }
     }
 
-    func requestAvailability() -> LocationAuthorization.Availability {
-        if let locationServicesUnavailability = LocationAuthorization.locationSerivicesEnabled(CLLocationManager.locationServicesEnabled()) {
+    /// Requests an availability object describing the current availability state.
+    ///
+    /// - Returns: An availability object describing the current state.
+    func requestAvailability() -> LocationAvailability.Availability {
+        if let locationServicesUnavailability = LocationAvailability.locationServicesEnabled(CLLocationManager.locationServicesEnabled()) {
             return locationServicesUnavailability
         }
 
-        if let authorizationStatusUnavailability = LocationAuthorization.authorizationStatus(CLLocationManager.authorizationStatus()) {
+        if let authorizationStatusUnavailability = LocationAvailability.authorizationStatus(CLLocationManager.authorizationStatus()) {
             return authorizationStatusUnavailability
         }
 
         return (available: true, error: nil)
     }
 
-    func startLocationUpdates(_ completion: @escaping LocationRequest) {
-        locationRequest = completion
+    /// Starts updating the location and reports the location updates to the optional update object.
+    ///
+    /// - Parameter update: The closure to receive updates through.
+    func startLocationUpdates(_ update: LocationUpdate?) {
+        locationUpdater = update
         locationManager.startUpdatingLocation()
     }
 
+
+    /// Stops updating the location.
     func stopLocationUpdates() {
         locationManager.stopUpdatingLocation()
-        locationRequest = nil
+        locationUpdater = nil
     }
 }
 
 extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         let locationError = LocationError(code: .unknown, message: error.localizedDescription)
-        locationRequest?(nil, locationError)
+        locationUpdater?(nil, locationError)
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        locationRequest?(locations, nil)
+        locationUpdater?(locations, nil)
     }
 }
