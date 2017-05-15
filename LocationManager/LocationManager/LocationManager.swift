@@ -27,15 +27,16 @@ class LocationManager: NSObject {
 
     // MARK: Public Variables
 
+    private(set) var locationUpdate: LocationUpdate?
+
     let permissionType: PermissionType
 
     // MARK: Private Variables
 
-    fileprivate var locationUpdater: LocationUpdate?
 
     private let availability: Availability
 
-    private let locationManager = CLLocationManager()
+    private let locationManager: CLLocationManager
 
     // MARK: Initialization Methods
 
@@ -44,6 +45,7 @@ class LocationManager: NSObject {
     /// - Parameter permissionType: The permission type to initialize with.
     init(permissionType: PermissionType) {
         self.availability = LocationAvailability()
+        self.locationManager = CLLocationManager()
         self.permissionType = permissionType
 
         super.init()
@@ -55,9 +57,11 @@ class LocationManager: NSObject {
     ///
     /// - Parameters:
     ///   - availability: Availability injectable
+    ///   - locationManager: Location manager injectable
     ///   - permissionType: Permission type injectable
-    init(availability: Availability, permissionType: PermissionType) {
+    init(availability: Availability, locationManager: CLLocationManager, permissionType: PermissionType) {
         self.availability = availability
+        self.locationManager = locationManager
         self.permissionType = permissionType
 
         super.init()
@@ -96,7 +100,7 @@ class LocationManager: NSObject {
     ///
     /// - Parameter update: The closure to receive updates through.
     func startLocationUpdates(_ update: LocationUpdate?) {
-        locationUpdater = update
+        locationUpdate = update
         locationManager.startUpdatingLocation()
     }
 
@@ -104,17 +108,17 @@ class LocationManager: NSObject {
     /// Stops updating the location.
     func stopLocationUpdates() {
         locationManager.stopUpdatingLocation()
-        locationUpdater = nil
+        locationUpdate = nil
     }
 }
 
 extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         let locationError = LocationError(code: .unknown, message: error.localizedDescription)
-        locationUpdater?(nil, locationError)
+        locationUpdate?(nil, locationError)
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        locationUpdater?(locations, nil)
+        locationUpdate?(locations, nil)
     }
 }
