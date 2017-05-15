@@ -27,12 +27,13 @@ class LocationManager: NSObject {
 
     // MARK: Public Variables
 
+    /// The closure that location update events are sent to.
     private(set) var locationUpdate: LocationUpdate?
 
+    /// The current permission type of the location manager.
     let permissionType: PermissionType
 
     // MARK: Private Variables
-
 
     private let availability: Availability
 
