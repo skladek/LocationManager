@@ -9,7 +9,7 @@
 import CoreLocation
 import UIKit
 
-class LocationManager: NSObject {
+public class LocationManager: NSObject {
 
     // MARK: Class Types
 
@@ -17,13 +17,13 @@ class LocationManager: NSObject {
     ///
     /// - always: Location permission is always available.
     /// - whenInUse: Location permission is only available when the app is in use.
-    enum PermissionType {
+    public enum PermissionType {
         case always
         case whenInUse
     }
 
     /// An object to send and receive location updates through.
-    typealias LocationUpdate = (_ locations: [CLLocation]?, _ error: NSError?) -> ()
+    public typealias LocationUpdate = (_ locations: [CLLocation]?, _ error: NSError?) -> ()
 
     // MARK: Public Variables
 
@@ -44,7 +44,7 @@ class LocationManager: NSObject {
     /// Initializes a Location Manager with the requested permission type.
     ///
     /// - Parameter permissionType: The permission type to initialize with.
-    init(permissionType: PermissionType) {
+    public init(permissionType: PermissionType) {
         self.availability = LocationAvailability()
         self.locationManager = CLLocationManager()
         self.permissionType = permissionType
@@ -73,7 +73,7 @@ class LocationManager: NSObject {
     // MARK: Public Methods
 
     /// Requests authorization with the current permission type from the location manager object.
-    func requestAuthorization() {
+    public func requestAuthorization() {
         if self.permissionType == .always {
             locationManager.requestAlwaysAuthorization()
         } else {
@@ -84,7 +84,7 @@ class LocationManager: NSObject {
     /// Requests an availability object describing the current availability state.
     ///
     /// - Returns: An availability object describing the current state.
-    func requestAvailability() -> Availability.AvailabilityStatus {
+    public func requestAvailability() -> Availability.AvailabilityStatus {
         let locationServicesAvailability = availability.servicesEnabled(CLLocationManager.locationServicesEnabled())
         let authorizationStatusAvailability = availability.authorizationStatus(CLLocationManager.authorizationStatus())
 
@@ -100,26 +100,26 @@ class LocationManager: NSObject {
     /// Starts updating the location and reports the location updates to the optional update object.
     ///
     /// - Parameter update: The closure to receive updates through.
-    func startLocationUpdates(_ update: LocationUpdate?) {
+    public func startLocationUpdates(_ update: LocationUpdate?) {
         locationUpdate = update
         locationManager.startUpdatingLocation()
     }
 
 
     /// Stops updating the location.
-    func stopLocationUpdates() {
+    public func stopLocationUpdates() {
         locationManager.stopUpdatingLocation()
         locationUpdate = nil
     }
 }
 
 extension LocationManager: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         let locationError = LocationError(code: .unknown, message: error.localizedDescription)
         locationUpdate?(nil, locationError)
     }
 
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locationUpdate?(locations, nil)
     }
 }

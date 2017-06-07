@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0830"
-   version = "1.7">
+   version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "14EBA45B1EC5FF000020C1DD"
-               BuildableName = "LocationManager.app"
+               BlueprintIdentifier = "1458E6961EE87FF1008F4019"
+               BuildableName = "LocationManager.framework"
                BlueprintName = "LocationManager"
                ReferencedContainer = "container:LocationManager.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "14EBA46F1EC5FF000020C1DD"
+               BlueprintIdentifier = "1458E69F1EE87FF2008F4019"
                BuildableName = "LocationManagerTests.xctest"
                BlueprintName = "LocationManagerTests"
                ReferencedContainer = "container:LocationManager.xcodeproj">
@@ -43,8 +43,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "14EBA45B1EC5FF000020C1DD"
-            BuildableName = "LocationManager.app"
+            BlueprintIdentifier = "1458E6961EE87FF1008F4019"
+            BuildableName = "LocationManager.framework"
             BlueprintName = "LocationManager"
             ReferencedContainer = "container:LocationManager.xcodeproj">
          </BuildableReference>
@@ -62,22 +62,17 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "14EBA45B1EC5FF000020C1DD"
-            BuildableName = "LocationManager.app"
+            BlueprintIdentifier = "1458E6961EE87FF1008F4019"
+            BuildableName = "LocationManager.framework"
             BlueprintName = "LocationManager"
             ReferencedContainer = "container:LocationManager.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
-      <LocationScenarioReference
-         identifier = "San Francisco, CA, USA"
-         referenceType = "1">
-      </LocationScenarioReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -85,16 +80,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "14EBA45B1EC5FF000020C1DD"
-            BuildableName = "LocationManager.app"
+            BlueprintIdentifier = "1458E6961EE87FF1008F4019"
+            BuildableName = "LocationManager.framework"
             BlueprintName = "LocationManager"
             ReferencedContainer = "container:LocationManager.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
