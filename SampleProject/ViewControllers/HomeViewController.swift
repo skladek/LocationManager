@@ -46,7 +46,7 @@ class HomeViewController: UIViewController {
 
     @IBAction func startUpdatingLocation() {
         locationManager.startLocationUpdates { (locations, error) in
-            
+            print(locations ?? "")
         }
     }
 

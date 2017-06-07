@@ -12,6 +12,8 @@
 		147CA45E1EE88A5500E25B2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147CA4561EE88A5500E25B2C /* LaunchScreen.storyboard */; };
 		147CA4601EE88A5500E25B2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147CA45A1EE88A5500E25B2C /* HomeViewController.swift */; };
 		147CA4611EE88A5500E25B2C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147CA45B1EE88A5500E25B2C /* HomeViewController.xib */; };
+		14F7D01D1EE88E0000C232AB /* LocationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147CA4681EE88A6C00E25B2C /* LocationManager.framework */; };
+		14F7D01E1EE88E0000C232AB /* LocationManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 147CA4681EE88A6C00E25B2C /* LocationManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +31,28 @@
 			remoteGlobalIDString = 1458E6A01EE87FF2008F4019;
 			remoteInfo = LocationManagerTests;
 		};
+		14F7D01F1EE88E0000C232AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 147CA4621EE88A6C00E25B2C /* LocationManager.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1458E6961EE87FF1008F4019;
+			remoteInfo = LocationManager;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		14F7D0211EE88E0000C232AB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				14F7D01E1EE88E0000C232AB /* LocationManager.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		147CA43E1EE889DB00E25B2C /* SampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F7D01D1EE88E0000C232AB /* LocationManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,10 +142,12 @@
 				147CA43A1EE889DB00E25B2C /* Sources */,
 				147CA43B1EE889DB00E25B2C /* Frameworks */,
 				147CA43C1EE889DB00E25B2C /* Resources */,
+				14F7D0211EE88E0000C232AB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				14F7D0201EE88E0000C232AB /* PBXTargetDependency */,
 			);
 			name = SampleProject;
 			productName = SampleProject;
@@ -210,6 +236,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14F7D0201EE88E0000C232AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LocationManager;
+			targetProxy = 14F7D01F1EE88E0000C232AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		147CA4561EE88A5500E25B2C /* LaunchScreen.storyboard */ = {
@@ -319,6 +353,7 @@
 		147CA4511EE889DB00E25B2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MV978XDK83;
 				INFOPLIST_FILE = "$(SRCROOT)/SampleProject/Application/Info.plist";
@@ -332,6 +367,7 @@
 		147CA4521EE889DB00E25B2C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MV978XDK83;
 				INFOPLIST_FILE = "$(SRCROOT)/SampleProject/Application/Info.plist";
