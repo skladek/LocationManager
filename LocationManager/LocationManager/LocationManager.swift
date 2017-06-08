@@ -25,19 +25,17 @@ public class LocationManager: NSObject {
     /// An object to send and receive location updates through.
     public typealias LocationUpdate = (_ locations: [CLLocation]?, _ error: NSError?) -> Void
 
-    // MARK: Public Variables
+    // MARK: Internal Variables
 
-    /// The closure that location update events are sent to.
-    private(set) var locationUpdate: LocationUpdate?
-
-    /// The current permission type of the location manager.
     let permissionType: PermissionType
+
+    let availability: Availability
+
+    let locationManager: CLLocationManager
 
     // MARK: Private Variables
 
-    private let availability: Availability
-
-    private let locationManager: CLLocationManager
+    private(set) var locationUpdate: LocationUpdate?
 
     // MARK: Initialization Methods
 
@@ -54,12 +52,6 @@ public class LocationManager: NSObject {
         locationManager.delegate = self
     }
 
-    /// Iniializes a Location Manager with injectable properties for testing purposes only. Do not use this initializer in production.
-    ///
-    /// - Parameters:
-    ///   - availability: Availability injectable
-    ///   - locationManager: Location manager injectable
-    ///   - permissionType: Permission type injectable
     init(availability: Availability, locationManager: CLLocationManager, permissionType: PermissionType) {
         self.availability = availability
         self.locationManager = locationManager

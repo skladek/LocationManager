@@ -27,6 +27,28 @@ class LocationManagerSpec: QuickSpec {
                 unitUnderTest = LocationManager(availability: availability, locationManager: locationManager, permissionType: .always)
             }
 
+            context("init(permissionType:)") {
+                it("Should set the availability") {
+                    unitUnderTest = LocationManager(permissionType: .always)
+                    expect(unitUnderTest.availability).to(beAnInstanceOf(LocationAvailability.self))
+                }
+
+                it("Should set the location manager") {
+                    unitUnderTest = LocationManager(permissionType: .always)
+                    expect(unitUnderTest.locationManager).to(beAnInstanceOf(CLLocationManager.self))
+                }
+
+                it("Should set the permission type") {
+                    unitUnderTest = LocationManager(permissionType: .always)
+                    expect(unitUnderTest.permissionType.hashValue).to(equal(LocationManager.PermissionType.always.hashValue))
+                }
+
+                it("Should set the location manager delegate to self") {
+                    unitUnderTest = LocationManager(permissionType: .always)
+                    expect(unitUnderTest.locationManager.delegate).to(be(unitUnderTest))
+                }
+            }
+
             context("requestAvailability()") {
                 it("Should return an availability status of true if authorization status and enabled return nil.") {
                     expect(unitUnderTest.requestAvailability().available).to(beTrue())
