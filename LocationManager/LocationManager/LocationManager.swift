@@ -23,7 +23,7 @@ public class LocationManager: NSObject {
     }
 
     /// An object to send and receive location updates through.
-    public typealias LocationUpdate = (_ locations: [CLLocation]?, _ error: NSError?) -> ()
+    public typealias LocationUpdate = (_ locations: [CLLocation]?, _ error: NSError?) -> Void
 
     // MARK: Public Variables
 
@@ -104,7 +104,6 @@ public class LocationManager: NSObject {
         locationUpdate = update
         locationManager.startUpdatingLocation()
     }
-
 
     /// Stops updating the location.
     public func stopLocationUpdates() {

@@ -46,12 +46,12 @@ public class LocationError: NSError {
 
         var userInfo: [AnyHashable : Any]? = nil
         if let message = localizedDescription {
-            userInfo = [NSLocalizedDescriptionKey : message]
+            userInfo = [NSLocalizedDescriptionKey: message]
         }
 
         super.init(domain: LocationError.errorDomain, code: code.rawValue, userInfo: userInfo)
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         return nil
     }
