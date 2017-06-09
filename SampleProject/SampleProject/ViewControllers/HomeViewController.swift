@@ -6,7 +6,7 @@
 //  Copyright © 2017 Sean Kladek. All rights reserved.
 //
 
-import LocationManager
+import SKLocationManager
 import UIKit
 
 class HomeViewController: UIViewController {

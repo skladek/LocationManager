@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1458E6961EE87FF1008F4019"
-               BuildableName = "LocationManager.framework"
-               BlueprintName = "LocationManager"
-               ReferencedContainer = "container:LocationManager.xcodeproj">
+               BlueprintIdentifier = "143F13D91EEB2FC000928BB5"
+               BuildableName = "SKLocationManager.framework"
+               BlueprintName = "SKLocationManager"
+               ReferencedContainer = "container:SKLocationManager.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,27 +26,26 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1458E69F1EE87FF2008F4019"
-               BuildableName = "LocationManagerTests.xctest"
-               BlueprintName = "LocationManagerTests"
-               ReferencedContainer = "container:LocationManager.xcodeproj">
+               BlueprintIdentifier = "143F13E21EEB2FC000928BB5"
+               BuildableName = "SKLocationManagerTests.xctest"
+               BlueprintName = "SKLocationManagerTests"
+               ReferencedContainer = "container:SKLocationManager.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1458E6961EE87FF1008F4019"
-            BuildableName = "LocationManager.framework"
-            BlueprintName = "LocationManager"
-            ReferencedContainer = "container:LocationManager.xcodeproj">
+            BlueprintIdentifier = "143F13D91EEB2FC000928BB5"
+            BuildableName = "SKLocationManager.framework"
+            BlueprintName = "SKLocationManager"
+            ReferencedContainer = "container:SKLocationManager.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,10 +64,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1458E6961EE87FF1008F4019"
-            BuildableName = "LocationManager.framework"
-            BlueprintName = "LocationManager"
-            ReferencedContainer = "container:LocationManager.xcodeproj">
+            BlueprintIdentifier = "143F13D91EEB2FC000928BB5"
+            BuildableName = "SKLocationManager.framework"
+            BlueprintName = "SKLocationManager"
+            ReferencedContainer = "container:SKLocationManager.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,10 +82,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1458E6961EE87FF1008F4019"
-            BuildableName = "LocationManager.framework"
-            BlueprintName = "LocationManager"
-            ReferencedContainer = "container:LocationManager.xcodeproj">
+            BlueprintIdentifier = "143F13D91EEB2FC000928BB5"
+            BuildableName = "SKLocationManager.framework"
+            BlueprintName = "SKLocationManager"
+            ReferencedContainer = "container:SKLocationManager.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
