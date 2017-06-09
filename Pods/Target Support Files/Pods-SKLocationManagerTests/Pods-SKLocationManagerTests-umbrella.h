@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_LocationManagerVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_LocationManagerVersionString[];
+FOUNDATION_EXPORT double Pods_SKLocationManagerTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_SKLocationManagerTestsVersionString[];
 

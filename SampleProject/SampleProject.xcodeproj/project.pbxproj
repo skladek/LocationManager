@@ -7,36 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1457B8841EEB319D00F9495E /* SKLocationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1457B8811EEB315A00F9495E /* SKLocationManager.framework */; };
+		1457B8851EEB319D00F9495E /* SKLocationManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1457B8811EEB315A00F9495E /* SKLocationManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		147CA45C1EE88A5500E25B2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147CA4541EE88A5500E25B2C /* AppDelegate.swift */; };
 		147CA45D1EE88A5500E25B2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 147CA4551EE88A5500E25B2C /* Assets.xcassets */; };
 		147CA45E1EE88A5500E25B2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147CA4561EE88A5500E25B2C /* LaunchScreen.storyboard */; };
 		147CA4601EE88A5500E25B2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147CA45A1EE88A5500E25B2C /* HomeViewController.swift */; };
 		147CA4611EE88A5500E25B2C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147CA45B1EE88A5500E25B2C /* HomeViewController.xib */; };
-		14F7D01D1EE88E0000C232AB /* LocationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147CA4681EE88A6C00E25B2C /* LocationManager.framework */; };
-		14F7D01E1EE88E0000C232AB /* LocationManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 147CA4681EE88A6C00E25B2C /* LocationManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		147CA4671EE88A6C00E25B2C /* PBXContainerItemProxy */ = {
+		1457B8801EEB315A00F9495E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 147CA4621EE88A6C00E25B2C /* LocationManager.xcodeproj */;
+			containerPortal = 1457B87B1EEB315A00F9495E /* SKLocationManager.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 1458E6971EE87FF1008F4019;
-			remoteInfo = LocationManager;
+			remoteGlobalIDString = 143F13DA1EEB2FC000928BB5;
+			remoteInfo = SKLocationManager;
 		};
-		147CA4691EE88A6C00E25B2C /* PBXContainerItemProxy */ = {
+		1457B8821EEB315A00F9495E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 147CA4621EE88A6C00E25B2C /* LocationManager.xcodeproj */;
+			containerPortal = 1457B87B1EEB315A00F9495E /* SKLocationManager.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 1458E6A01EE87FF2008F4019;
-			remoteInfo = LocationManagerTests;
+			remoteGlobalIDString = 143F13E31EEB2FC000928BB5;
+			remoteInfo = SKLocationManagerTests;
 		};
-		14F7D01F1EE88E0000C232AB /* PBXContainerItemProxy */ = {
+		1457B8861EEB319D00F9495E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 147CA4621EE88A6C00E25B2C /* LocationManager.xcodeproj */;
+			containerPortal = 1457B87B1EEB315A00F9495E /* SKLocationManager.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 1458E6961EE87FF1008F4019;
-			remoteInfo = LocationManager;
+			remoteGlobalIDString = 143F13D91EEB2FC000928BB5;
+			remoteInfo = SKLocationManager;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -47,7 +47,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				14F7D01E1EE88E0000C232AB /* LocationManager.framework in Embed Frameworks */,
+				1457B8851EEB319D00F9495E /* SKLocationManager.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1457B87B1EEB315A00F9495E /* SKLocationManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SKLocationManager.xcodeproj; path = ../SKLocationManager.xcodeproj; sourceTree = "<group>"; };
 		147CA43E1EE889DB00E25B2C /* SampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		147CA4541EE88A5500E25B2C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		147CA4551EE88A5500E25B2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		147CA4581EE88A5500E25B2C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		147CA45A1EE88A5500E25B2C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		147CA45B1EE88A5500E25B2C /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		147CA4621EE88A6C00E25B2C /* LocationManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = LocationManager.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,19 +70,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14F7D01D1EE88E0000C232AB /* LocationManager.framework in Frameworks */,
+				1457B8841EEB319D00F9495E /* SKLocationManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1457B87C1EEB315A00F9495E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1457B8811EEB315A00F9495E /* SKLocationManager.framework */,
+				1457B8831EEB315A00F9495E /* SKLocationManagerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		147CA4351EE889DB00E25B2C = {
 			isa = PBXGroup;
 			children = (
 				147CA4401EE889DB00E25B2C /* SampleProject */,
 				147CA43F1EE889DB00E25B2C /* Products */,
-				147CA4621EE88A6C00E25B2C /* LocationManager.xcodeproj */,
+				1457B87B1EEB315A00F9495E /* SKLocationManager.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,15 +132,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		147CA4631EE88A6C00E25B2C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				147CA4681EE88A6C00E25B2C /* LocationManager.framework */,
-				147CA46A1EE88A6C00E25B2C /* LocationManagerTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,7 +147,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				14F7D0201EE88E0000C232AB /* PBXTargetDependency */,
+				1457B8871EEB319D00F9495E /* PBXTargetDependency */,
 			);
 			name = SampleProject;
 			productName = SampleProject;
@@ -184,8 +184,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 147CA4631EE88A6C00E25B2C /* Products */;
-					ProjectRef = 147CA4621EE88A6C00E25B2C /* LocationManager.xcodeproj */;
+					ProductGroup = 1457B87C1EEB315A00F9495E /* Products */;
+					ProjectRef = 1457B87B1EEB315A00F9495E /* SKLocationManager.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -196,18 +196,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		147CA4681EE88A6C00E25B2C /* LocationManager.framework */ = {
+		1457B8811EEB315A00F9495E /* SKLocationManager.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = LocationManager.framework;
-			remoteRef = 147CA4671EE88A6C00E25B2C /* PBXContainerItemProxy */;
+			path = SKLocationManager.framework;
+			remoteRef = 1457B8801EEB315A00F9495E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		147CA46A1EE88A6C00E25B2C /* LocationManagerTests.xctest */ = {
+		1457B8831EEB315A00F9495E /* SKLocationManagerTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = LocationManagerTests.xctest;
-			remoteRef = 147CA4691EE88A6C00E25B2C /* PBXContainerItemProxy */;
+			path = SKLocationManagerTests.xctest;
+			remoteRef = 1457B8821EEB315A00F9495E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -238,10 +238,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		14F7D0201EE88E0000C232AB /* PBXTargetDependency */ = {
+		1457B8871EEB319D00F9495E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = LocationManager;
-			targetProxy = 14F7D01F1EE88E0000C232AB /* PBXContainerItemProxy */;
+			name = SKLocationManager;
+			targetProxy = 1457B8861EEB319D00F9495E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

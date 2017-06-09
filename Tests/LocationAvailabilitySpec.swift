@@ -10,7 +10,7 @@ import Foundation
 import Nimble
 import Quick
 
-@testable import LocationManager
+@testable import SKLocationManager
 
 class LocationAvailabilitySpec: QuickSpec {
 

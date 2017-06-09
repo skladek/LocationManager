@@ -8,7 +8,7 @@ lane :test do
   )
   
   scan(
-    scheme: "LocationManager",
-    workspace: "LocationManager.xcworkspace"
+    scheme: "SKLocationManager",
+    workspace: "SKLocationManager.xcworkspace"
   )
 end

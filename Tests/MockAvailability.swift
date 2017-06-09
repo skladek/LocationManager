@@ -7,7 +7,7 @@
 //
 
 import CoreLocation
-@testable import LocationManager
+@testable import SKLocationManager
 
 class MockAvailability: Availability {
     var authorized = true
