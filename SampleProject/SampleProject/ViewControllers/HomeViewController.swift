@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func requestPermissionTapped() {
-        locationManager.requestAuthorization()
+        locationManager.requestAuthorization { (_) in }
     }
 
     @IBAction func startUpdatingLocation() {

@@ -22,16 +22,21 @@ public class LocationManager: NSObject {
         case whenInUse
     }
 
+    /// An object that returns the authorization status when the authorization request is completed.
+    public typealias AuthorizationCompletion = (_ authorizationStatus: CLAuthorizationStatus) -> Void
+
     /// An object to send and receive location updates through.
     public typealias LocationUpdate = (_ locations: [CLLocation]?, _ error: NSError?) -> Void
 
     // MARK: Internal Variables
 
-    let permissionType: PermissionType
+    var authorizationCompletion: AuthorizationCompletion?
 
     let availability: Availability
 
     let locationManager: CLLocationManager
+
+    let permissionType: PermissionType
 
     // MARK: Private Variables
 
@@ -65,7 +70,11 @@ public class LocationManager: NSObject {
     // MARK: Public Methods
 
     /// Requests authorization with the current permission type from the location manager object.
-    public func requestAuthorization() {
+    ///
+    /// - Parameter completion: A closure that is called once the authorization status is changed via a user selection.
+    public func requestAuthorization(completion: @escaping AuthorizationCompletion) {
+        authorizationCompletion = completion
+
         if self.permissionType == .always {
             locationManager.requestAlwaysAuthorization()
         } else {
@@ -105,6 +114,12 @@ public class LocationManager: NSObject {
 }
 
 extension LocationManager: CLLocationManagerDelegate {
+    public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if let authorizationCompletion = authorizationCompletion {
+            authorizationCompletion(status)
+        }
+    }
+
     public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         let locationError = LocationError(code: .unknown, message: error.localizedDescription)
         locationUpdate?(nil, locationError)
