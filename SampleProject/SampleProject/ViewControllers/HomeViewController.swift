@@ -1,11 +1,3 @@
-//
-//  HomeViewController.swift
-//  LocationManager
-//
-//  Created by Sean on 5/12/17.
-//  Copyright © 2017 Sean Kladek. All rights reserved.
-//
-
 import SKLocationManager
 import UIKit
 
@@ -41,7 +33,7 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func requestPermissionTapped() {
-        locationManager.requestAuthorization()
+        locationManager.requestAuthorization { (_) in }
     }
 
     @IBAction func startUpdatingLocation() {

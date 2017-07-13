@@ -1,11 +1,3 @@
-//
-//  LocationManagerSpec.swift
-//  LocationManager
-//
-//  Created by Sean on 5/12/17.
-//  Copyright © 2017 Sean Kladek. All rights reserved.
-//
-
 import CoreLocation
 import Foundation
 import Nimble
@@ -68,13 +60,13 @@ class LocationManagerSpec: QuickSpec {
             context("requestAuthorization()") {
                 it("should call requestAlwaysAuthorization when permission type is set to always") {
                     unitUnderTest = LocationManager(availability: availability, locationManager: locationManager, permissionType: .always)
-                    unitUnderTest.requestAuthorization()
+                    unitUnderTest.requestAuthorization { (_) in }
                     expect(locationManager.requestAlwaysAuthorizationCalled).to(beTrue())
                 }
 
                 it("should call requestWhenInUseAuthorization when permission type is set to whenInUse") {
                     unitUnderTest = LocationManager(availability: availability, locationManager: locationManager, permissionType: .whenInUse)
-                    unitUnderTest.requestAuthorization()
+                    unitUnderTest.requestAuthorization { (_) in }
                     expect(locationManager.requestWhenInUseAuthorizationCalled).to(beTrue())
                 }
             }
@@ -101,6 +93,22 @@ class LocationManagerSpec: QuickSpec {
                     unitUnderTest.startLocationUpdates({ (locations, error) in })
                     unitUnderTest.stopLocationUpdates()
                     expect(unitUnderTest.locationUpdate).to(beNil())
+                }
+            }
+
+            context("locationManager(_:didChangeAuthorization:)") {
+                it("Should pass the authorization status through the authorizationCompletion closure") {
+                    let inputStatus: CLAuthorizationStatus = .restricted
+
+                    waitUntil(timeout: 2) { done in
+                        let completion: LocationManager.AuthorizationCompletion = { (outputStatus) in
+                            expect(outputStatus).to(equal(inputStatus))
+                            done()
+                        }
+
+                        unitUnderTest.authorizationCompletion = completion
+                        unitUnderTest.locationManager(locationManager, didChangeAuthorization: inputStatus)
+                    }
                 }
             }
 

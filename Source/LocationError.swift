@@ -1,11 +1,3 @@
-//
-//  LocationError.swift
-//  LocationManager
-//
-//  Created by Sean on 5/12/17.
-//  Copyright © 2017 Sean Kladek. All rights reserved.
-//
-
 import Foundation
 
 public class LocationError: NSError {
