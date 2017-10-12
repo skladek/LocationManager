@@ -36,7 +36,7 @@ public class LocationError: NSError {
             localizedDescription = "An unknown error occurred."
         }
 
-        var userInfo: [AnyHashable : Any]? = nil
+        var userInfo: [String: Any]? = nil
         if let message = localizedDescription {
             userInfo = [NSLocalizedDescriptionKey: message]
         }
