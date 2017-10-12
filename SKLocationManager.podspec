@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'SKLocationManager'
-  spec.version = '0.0.3'
+  spec.version = '1.0.0'
   spec.license = 'MIT'
   spec.summary = 'A wrapper around CLLocationManager to simplify requesting permission and receiving events.'
   spec.homepage = 'https://github.com/skladek/SKLocationManager'
